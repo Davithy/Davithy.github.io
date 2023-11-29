@@ -1,0 +1,176 @@
+/* Navigation Bar Blueprint*/
+ul.top_nav {
+    list-style-type: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 5;
+}
+
+/*list attribute*/
+li {
+    float: left;
+}
+
+/*all links*/
+li a {
+    display: block;
+    color: white;
+    padding: 14px 20px 14px;
+}
+
+/*contact and socials attributes*/
+li a.links {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    padding: 20px;
+    text-decoration: none;
+    overflow: auto;
+}
+
+li a.links:hover {
+    background-color: #111;
+    transition: background-color 0.5s;
+}
+
+/*Aron Ferreras title attribute*/
+#site_name {
+    font-size: 2.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#site_name:hover {
+    color: #333;
+    background-color: white;
+}
+
+/*for phone screen*/
+@media screen and (max-width: 720px) {
+    ul.top_nav li {float: none;}
+    #title_name {margin-top: 42%;}
+    div.project_card {padding-bottom: 15%;}
+    div.project_card:hover .project_card_about {width: 40%;}
+    div.project_page_description {margin-top: 35%; width: 100%;}
+    img.imageFile {width: 100%;}
+    video.imageFile {width: 100%;}
+    p.description {width: 100%;}
+}
+
+/*Portfolio Title*/
+#title_name {
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+/*Image Hover Effect Blueprint*/
+.homepage_project_image {
+    width: 75%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.65;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width 4s, height 4s, ease-in 0.1s, opacity 0.3s;
+    filter: grayscale(100%);
+}
+
+/*Image expands and gains opacity and color*/
+.project_card:hover .homepage_project_image {
+    width: 100%;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    filter: grayscale(0%);
+}
+
+/*text expands below image*/
+.project_card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 20%;
+}
+
+/*Removes underline from link*/
+.project_card_name a{
+    text-decoration: none;
+}
+
+/*Name of project*/
+.project_card_name  {
+    position: absolute;
+    text-align: center;
+    padding-top: 8px;
+    width: 100%;
+    margin: auto;
+    font-size: 1.25em;
+    z-index: 1;
+    transition: width 0.1s, ease 0.5s;
+}
+
+/*Name moves to the left when hovered*/
+.project_card:hover .project_card_name {
+    width: 20%;
+}
+
+/*Brief description of project*/
+.project_card_about {
+    float: right;
+    text-align: left;
+    padding-top: 7px;
+    width: 100%;
+    margin: auto;
+    transition: 0.6s, opacity 0.275s;
+    opacity: 0;
+}
+
+/*description gains opacity and moves to the left*/
+.project_card:hover .project_card_about {
+    width: 50%;
+    opacity: 100%;
+}
+
+.project_page_description {
+    margin: auto;
+    padding-top: 5%;
+    width: 64%;
+}
+
+/*Moves Description to the right of the image*/
+.description {
+    width: 70%;
+    float: right;
+}
+
+/*Shrinks the image*/
+.imageFile {
+    max-height: auto;
+    width: 65%;
+}
+
+/*specifically for the book cover*/
+#bookCover {
+}
+
+/*Caption padding adjustment*/
+.center {
+    margin: auto;
+}
+
+/*filler space for the bottom of the window*/
+.footer {
+    display: block;
+    padding: 50px;
+}
